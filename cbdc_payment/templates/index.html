@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}eNaira Payment Gateway{% endblock %}
+
+{% block content %}
+    <!-- Top Banner -->
+    <div class="container border-bottom text-md-start text-center">
+        <div class="row my-5 align-items-center">
+            <div class="col-md-7">
+                <h1 class="display-3">Online Payment Solution with eNaira</h1>
+                <p class="lead">Sell online, accept digital currency payments, and pay your bills with our fast and secure eNaira payment tools.</p>
+                <a href="{{ url_for('routes.contact_us') }}" class="btn btn-success btn-lg">Contact Sales</a>
+            </div>
+            <div class="col-md-5 gx-5">
+                <img src="{{ url_for('static', filename='img/undraw_Transfer_money_re_6o1h.png') }}" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <!-- Smart Solutions Cards -->
+    <div class="container border-bottom">
+        <div class="row my-5">
+            <h2 class="display-6 text-center">Smart Solutions for Your Online Business & Lifestyle</h2>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-5 mb-5">
+            <div class="col">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='/img/undraw_Add_to_cart_re_wrdo.png') }}" class="card-img-top" alt="Accept Payments">
+                    <div class="card-body">
+                        <h5 class="card-title">Accept Payments</h5>
+                        <p class="card-text">
+                            Sell online and accept eNaira payments with our digital currency payment tools.
+                        </p>
+                        <a href="{{ url_for('routes.checkout_demo') }}" class="btn btn-success">View Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='/img/undraw_Mobile_payments_re_7udl.png') }}" class="card-img-top" alt="Payment Links">
+                    <div class="card-body">
+                        <h5 class="card-title">Payment Links</h5>
+                        <p class="card-text">
+                            Create and share unique payment links to receive one-time or recurring payments.
+                        </p>
+                        <a href="{{ url_for('routes.payment_links') }}" class="btn btn-success">View Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='/img/undraw_Order_confirmed_re_g0if.png') }}" class="card-img-top" alt="Pay Bills">
+                    <div class="card-body">
+                        <h5 class="card-title">Pay Bills</h5>
+                        <p class="card-text">
+                            Pay your electricity, airtime, cable TV, internet, and other utility bills.
+                        </p>
+                        <a href="{{ url_for('routes.pay_bills') }}" class="btn btn-success">View Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
