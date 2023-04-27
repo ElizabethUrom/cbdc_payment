@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Header -->
+<div class="container border-bottom">
+    <div class="row my-5">
+        <h1 class="text-center">
+            {% block title %}Payment Links{% endblock %}
+        </h1>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="container border-bottom">
+    <div class="row my-5">
+        <form action="" method="post">
+            <div class="form-group my-4">
+              <label for="payer_name">Payer Name:</label>
+              <input type="text" class="form-control" id="payer_name" name="payer_name" required>
+            </div>
+            <div class="form-group my-4">
+              <label for="payer_email">Payer Email:</label>
+              <input type="email" class="form-control" id="payer_email" name="payer_email" required>
+            </div>
+            <div class="form-group my-4">
+                <label for="payment_amount">Payment Amount:</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text">₦</span>
+                    <input type="number" class="form-control" id="payment_amount" required="">
+              </div>
+            </div>
+            <div class="form-group my-4">
+              <label for="payment_description">Payment Description:</label>
+              <textarea class="form-control" id="payment_description" name="payment_description" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Generate Payment Link</button>
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}
